@@ -1,0 +1,66 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 4905378962,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I open the URL",
+            "match": {
+              "location": "LoginStepDefs.iOpenTheURL()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 8,
+        "name": "Signup an account which valid information",
+        "description": "",
+        "id": "registration-for-a-new-user;signup-an-account-which-valid-information",
+        "after": [
+          {
+            "result": {
+              "duration": 145325179,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1662488122,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I click on Register",
+            "match": {
+              "location": "RegisterStepDefs.iClickOnRegister()"
+            },
+            "keyword": "When "
+          }
+        ]
+      }
+    ],
+    "name": "Registration for a new user",
+    "description": "As a new user I want to signup new account",
+    "id": "registration-for-a-new-user",
+    "keyword": "Feature",
+    "uri": "Registration.feature"
+  }
+]

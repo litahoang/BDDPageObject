@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="6.713192">
+<testcase classname="Registration for a new user" name="Signup an account which valid information" time="6.713192">
+<system-out><![CDATA[Given I open the URL........................................................passed
+When I click on Register....................................................passed
+]]></system-out>
+</testcase>
+</testsuite>
