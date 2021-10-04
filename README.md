@@ -77,7 +77,9 @@ Please refer folder 'TestReports' after run test
 # How to run
 ### By mvn
 Clone repo: git clone https://github.com/pthao31192/BDDPageObject.git
+
 cd BDDPageObject
+
 mvn clean test
 ### By Test Runner
 Right click and select Run 'TestRunner'
