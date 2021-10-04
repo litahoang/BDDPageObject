@@ -72,9 +72,17 @@ Things to note
 # Reports
 #### Console Output which is more readable
 #### HTML Report which gives clear details on each and every step of scenario
+Please refer folder 'TestReports' after run test
 
 # How to run
-Clone repo: 
+### By mvn
+Clone repo: git clone https://github.com/pthao31192/BDDPageObject.git
+cd BDDPageObject
+mvn clean test
+### By Test Runner
+Right click and select Run 'TestRunner'
+
+
 
 
 
