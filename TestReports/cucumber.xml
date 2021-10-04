@@ -1,8 +1,38 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="6.713192">
-<testcase classname="Registration for a new user" name="Signup an account which valid information" time="6.713192">
-<system-out><![CDATA[Given I open the URL........................................................passed
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="131.09692">
+<testcase classname="Registration for a new user" name="Signup an account which valid information" time="131.09692">
+<failure message="org.openqa.selenium.InvalidSelectorException: invalid selector: Unable to locate an element with the xpath expression //div[@class='q-item__label' and contains(text(),'%s')]Viet nam because of the following error:&#10;SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//div[@class='q-item__label' and contains(text(),'%s')]Viet nam' is not a valid XPath expression.&#10;  (Session info: chrome=94.0.4606.71)&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html&#10;Build info: version: '3.7.0', revision: '2321c73', time: '2017-11-02T22:22:35.584Z'&#10;System info: host: 'tho-macbook', ip: '2402:9d80:201:eb39:386e:b306:5411:f534%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_261'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.71, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: /var/folders/vb/hkzl8n6x1lv...}, goog:chromeOptions: {debuggerAddress: localhost:61015}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: d60bdb4af9e3b60009cca38dba0a5f7d&#10;*** Element info: {Using=xpath, value=//div[@class='q-item__label' and contains(text(),'%s')]Viet nam}&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#10;&#9;at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:370)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:472)&#10;&#9;at org.openqa.selenium.By$ByXPath.findElement(By.java:361)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)&#10;&#9;at pageobjects.RegisterPage.scrollToElement(RegisterPage.java:43)&#10;&#9;at pageobjects.RegisterPage.selectCountryName(RegisterPage.java:34)&#10;&#9;at stepdefinition.RegisterStepDefs.fillOutTheFormWithInformation(RegisterStepDefs.java:63)&#10;&#9;at ✽.And fill out the form with information(Registration.feature:9)&#10;"><![CDATA[Given I open the URL........................................................passed
 When I click on Register....................................................passed
-]]></system-out>
+And fill out the form with information......................................failed
+
+StackTrace:
+org.openqa.selenium.InvalidSelectorException: invalid selector: Unable to locate an element with the xpath expression //div[@class='q-item__label' and contains(text(),'%s')]Viet nam because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//div[@class='q-item__label' and contains(text(),'%s')]Viet nam' is not a valid XPath expression.
+  (Session info: chrome=94.0.4606.71)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
+Build info: version: '3.7.0', revision: '2321c73', time: '2017-11-02T22:22:35.584Z'
+System info: host: 'tho-macbook', ip: '2402:9d80:201:eb39:386e:b306:5411:f534%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_261'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.71, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: /var/folders/vb/hkzl8n6x1lv...}, goog:chromeOptions: {debuggerAddress: localhost:61015}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d60bdb4af9e3b60009cca38dba0a5f7d
+*** Element info: {Using=xpath, value=//div[@class='q-item__label' and contains(text(),'%s')]Viet nam}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:370)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:472)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at pageobjects.RegisterPage.scrollToElement(RegisterPage.java:43)
+	at pageobjects.RegisterPage.selectCountryName(RegisterPage.java:34)
+	at stepdefinition.RegisterStepDefs.fillOutTheFormWithInformation(RegisterStepDefs.java:63)
+	at ✽.And fill out the form with information(Registration.feature:9)
+]]></failure>
 </testcase>
 </testsuite>

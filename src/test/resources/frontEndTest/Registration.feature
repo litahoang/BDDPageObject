@@ -7,8 +7,8 @@ Feature: Registration for a new user
   Scenario: Signup an account which valid information
     When I click on Register
     And fill out the form with information
-      | Fullname   | Preferred name | Email | Mobile number | Follow channel |
-      | James Smith | Jackson        | test  | 906022        |                |
+      | Fullname    | Preferred name | Email | Country  | Mobile number | Follow channel |
+      | James Smith | Jackson        | test  | Viet Nam | 906022833     | Google         |
 
 
 

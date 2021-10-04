@@ -10,6 +10,7 @@ import objects.User;
 import org.openqa.selenium.WebDriver;
 import pageobjects.LoginPage;
 import pageobjects.RegisterPage;
+import utilities.RandomUtil;
 
 import java.util.List;
 import java.util.Map;
@@ -30,6 +31,7 @@ public class RegisterStepDefs {
         loginPage = testContext.getPageObjectManager().getLoginPage();
         registerPage = testContext.getPageObjectManager().getRegisterPage();
     }
+
     @When("^I click on Register$")
     public void iClickOnRegister() {
         loginPage.navigateToRegister();
@@ -44,14 +46,27 @@ public class RegisterStepDefs {
         String fullName = row.get("Fullname");
         String preferredName = row.get("Preferred name");
         String email = row.get("Email");
+        String countryName = row.get("Country");
         String mobileNumber = row.get("Mobile number");
         String followChannel = row.get("Follow channel");
 
-        if (!fullName.isEmpty()){
+        if (!fullName.isEmpty()) {
             registerPage.inputFullname(fullName);
         }
-        if (!preferredName.isEmpty()){
-            registerPage.inputpreferredName(preferredName);
+        if (!preferredName.isEmpty()) {
+            registerPage.inputPreferredName(preferredName);
+        }
+        if (!email.isEmpty()) {
+            registerPage.inputEmail(email + RandomUtil.nextString(5) + "@gmail.com");
+        }
+        if (!countryName.isEmpty()) {
+            registerPage.selectCountryName(countryName);
+        }
+        if (!mobileNumber.isEmpty()) {
+            registerPage.inputMobileNumber(mobileNumber);
+        }
+        if (!followChannel.isEmpty()){
+            registerPage.selectFollowingChannel(followChannel);
         }
     }
 }
