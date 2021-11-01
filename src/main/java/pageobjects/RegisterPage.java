@@ -39,7 +39,7 @@ public class RegisterPage {
         driver.findElement(By.xpath(String.format(RegisterUI.OPTIONS, countryName))).click();
     }
 
-    public void selectFollowingChannel(String channel){
+    public void selectFollowingChannel(String channel) {
         waitForVisibilityOfElement(RegisterUI.FOLLOWING_DROPDOWN);
         driver.findElement(By.xpath(RegisterUI.FOLLOWING_DROPDOWN)).click();
         scrollToElement(channel);
@@ -62,8 +62,17 @@ public class RegisterPage {
             e.printStackTrace();
         }
     }
+
     public void waitForVisibilityOfElement(String xPath) {
         WebDriverWait wait = new WebDriverWait(driver, 30);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xPath)));
+    }
+
+    public void selectCheckbox() {
+        driver.findElement(By.xpath(String.format(RegisterUI.CHECKBOX))).click();
+    }
+
+    public void clickContinueBtn() {
+        driver.findElement(By.xpath(String.format(RegisterUI.CONTINUE_BTN))).click();
     }
 }
