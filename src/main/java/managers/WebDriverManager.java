@@ -1,10 +1,8 @@
 package managers;
 
-import cucumber.api.java.After;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import java.util.concurrent.TimeUnit;
 
@@ -13,7 +11,8 @@ public class WebDriverManager {
 	private static DriverType driverType;
 	private static EnvironmentType environmentType;
 	private static final String CHROME_DRIVER_PROPERTY = "webdriver.chrome.driver";
- 
+	private static final String FIREFOX_DRIVER_PROPERTY = "webdriver.gecko.driver";
+
 	public WebDriverManager() {
 		driverType = FileReaderManager.getInstance().getConfigReader().getBrowser();
 		environmentType = FileReaderManager.getInstance().getConfigReader().getEnvironment();
@@ -40,14 +39,16 @@ public class WebDriverManager {
  
 	private WebDriver createLocalDriver() {
         switch (driverType) {	    
-        case FIREFOX : driver = new FirefoxDriver();
-	    	break;
+        case FIREFOX :
+			System.setProperty(FIREFOX_DRIVER_PROPERTY,FileReaderManager.getInstance().getConfigReader().getDriverPath());
+			driver = new FirefoxDriver();
+			break;
         case CHROME : 
         	System.setProperty(CHROME_DRIVER_PROPERTY, FileReaderManager.getInstance().getConfigReader().getDriverPath());
         	driver = new ChromeDriver();
     		break;
-        case INTERNETEXPLORER : driver = new InternetExplorerDriver();
-    		break;
+//        case INTERNETEXPLORER : driver = new InternetExplorerDriver();
+//    		break;
         }
  
         if(FileReaderManager.getInstance().getConfigReader().getBrowserWindowSize()) driver.manage().window().maximize();
